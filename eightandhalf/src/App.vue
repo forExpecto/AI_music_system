@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- 使用 NavBar 组件 -->
     <NavBar></NavBar>
   </div>
 </template>

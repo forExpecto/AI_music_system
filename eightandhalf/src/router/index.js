@@ -1,24 +1,21 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from '../views/HomePart.vue';
-import Music from '../views/MusicPart.vue';
-import Artist from '../views/ArtistPart.vue';
+import HomePart from "@/views/HomePart.vue";
+import MusicPart from "@/views/MusicPart.vue";
+import ArtistPart from "@/views/ArtistPart.vue";
 
 const routes = [
     {
         path: '/',
-        name: 'home',
-        component: Home
+        component: HomePart
     },
     {
         path: '/music',
-        name: 'music',
-        component: Music
+        component: MusicPart
     },
 
     {
         path: '/artist',
-        name: 'artist',
-        component: Artist
+        component: ArtistPart
     }
 ]
 

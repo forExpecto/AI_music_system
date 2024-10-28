@@ -1,12 +1,15 @@
 <template>
     <div>
-        <RouterLink to="/home">首页</RouterLink>
-        <RouterLink to="/about">关于</RouterLink>
-        <RouterLink to="/music">音乐</RouterLink>
+        <nav>
+            <router-link to="/">Home</router-link>
+            <router-link to="/about">About</router-link>
+        </nav>
+        <router-view />
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'NavBar',
     data() {
