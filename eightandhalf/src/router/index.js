@@ -2,6 +2,10 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HomePart from "@/views/HomePart.vue";
 import MusicPart from "@/views/MusicPart.vue";
 import ArtistPart from "@/views/ArtistPart.vue";
+import LookForMusic from "@/views/LookForMusic.vue";
+import MyMusic from "@/views/MyMusic.vue";
+import MusicCommunity from "@/views/MusicCommunity.vue";
+
 
 const routes = [
     {
@@ -16,6 +20,18 @@ const routes = [
     {
         path: '/artist',
         component: ArtistPart
+    },
+    {
+        path: '/lookForMusic',
+        component: LookForMusic
+    },
+    {
+        path: '/myMusic',
+        component: MyMusic
+    },
+    {
+        path: '/musicCommunity',
+        component: MusicCommunity
     }
 ]
 
