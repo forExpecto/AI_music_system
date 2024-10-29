@@ -30,17 +30,6 @@ export default {
             isFixed: false
         };
     },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    beforeUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
-    methods: {
-        handleScroll() {
-            this.isFixed = window.scrollY > 0;
-        }
-    }
 };
 </script>
 

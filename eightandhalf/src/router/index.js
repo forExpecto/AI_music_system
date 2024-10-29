@@ -4,6 +4,7 @@ import LookForMusic from "@/views/LookForMusic.vue";
 import MyMusic from "@/views/MyMusic.vue";
 import MusicCommunity from "@/views/MusicCommunity.vue";
 import LoginView from "@/views/Login/LoginView.vue";
+import Register from "@/views/Login/RegisterView.vue";
 
 
 const routes = [
@@ -28,6 +29,10 @@ const routes = [
         path: '/login',
         component: LoginView
     },
+    {
+        path: '/register',
+        component: Register
+    }
 ]
 
 const router = createRouter({

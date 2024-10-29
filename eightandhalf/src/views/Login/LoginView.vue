@@ -15,9 +15,13 @@
                     <label for="password">密码</label>
                     <input type="password" id="password" v-model="password" placeholder="请输入密码" required />
                 </div>
-
+                <!-- 注册模块 -->
+                <div class="register-link">
+                    <router-link to="/register">用户注册</router-link>
+                </div>
                 <button type="submit" class="login-button">登录</button>
             </form>
+
         </div>
     </div>
 </template>
@@ -113,4 +117,16 @@ input {
 .login-button:hover {
     background-color: #36a173;
 }
+
+.register-link {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
 </style>
+
+
+<script>
+
+
+</script>

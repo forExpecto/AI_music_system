@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>首页</h1>
+        <CarouselComponent />
     </div>
 </template>
 
@@ -14,7 +15,12 @@ h1 {
 
 
 <script>
+import CarouselComponent from '@/components/CarouselComponent.vue';
+
 export default {
     name: 'HomePart',
+    components: {
+        CarouselComponent
+    }
 };
 </script>
