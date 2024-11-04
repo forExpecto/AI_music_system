@@ -1,12 +1,18 @@
 <template>
-    <el-carousel :interval="4000" type="card" height="200px">
+    <el-carousel :interval="4000" type="card" height="300px">
         <el-carousel-item v-for="item in 6" :key="item">
-            <h3 class="medium">{{ item }}</h3>
+            <img :src="require(`@/assets/Carousel/image${item}.jpg`)" alt="carousel-image" class="carousel-image" />
         </el-carousel-item>
     </el-carousel>
 </template>
 
 <style>
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .el-carousel__item h3 {
     color: #475669;
     font-size: 14px;
