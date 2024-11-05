@@ -12,6 +12,10 @@
                 <router-link to="/musicCommunity">社区</router-link>
             </nav>
 
+            <!-- 头像和登录按钮 -->
+            <HeadPicture />
+
+
             <!-- 搜索框 -->
             <div class="search-bar">
                 <span class="search-icon">🔍</span>
@@ -22,8 +26,33 @@
     <router-view class="page-content" />
 </template>
 
+
+
+
+
+<style scoped>
+.demo-type {
+    display: flex;
+}
+
+.demo-type>div {
+    flex: 1;
+    text-align: center;
+}
+
+.demo-type>div:not(:last-child) {
+    border-right: 1px solid var(--el-border-color);
+}
+</style>
+
+
+
 <script>
+import HeadPicture from './HeadPicture.vue';
 export default {
+    components: {
+        HeadPicture
+    },
     name: 'NavBar',
     data() {
         return {
@@ -32,6 +61,7 @@ export default {
     },
 };
 </script>
+
 
 <style scoped>
 .navbar {

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <CarouselComponent />
         <el-container>
             <el-header>
                 <!-- <h1>音乐列表</h1> -->
@@ -21,7 +22,13 @@
 </template>
 
 <script>
+import { lookformusic } from './Login/utils/lookformusic'
+import CarouselComponent from '@/components/CarouselComponent.vue';
+
 export default {
+    components: {
+        CarouselComponent
+    },
     data() {
         return {
             songs: [
@@ -33,10 +40,18 @@ export default {
                 { name: '歌曲6', artist: '歌手6' },
                 { name: '歌曲7', artist: '歌手7' },
                 { name: '歌曲8', artist: '歌手8' },
-
-
             ]
         };
+    },
+    methods: {
+
+        // lookformusic() {
+        //     lookformusic()
+        // }
+    },
+    created() {
+        lookformusic()
+
     }
 };
 </script>

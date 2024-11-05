@@ -5,6 +5,7 @@ import MyMusic from "@/views/MyMusic.vue";
 import MusicCommunity from "@/views/MusicCommunity.vue";
 import LoginView from "@/views/Login/LoginView.vue";
 import Register from "@/views/Login/RegisterView.vue";
+import PlayView from "@/views/MusicPlayView/PlayView.vue";
 
 
 const routes = [
@@ -32,6 +33,10 @@ const routes = [
     {
         path: '/register',
         component: Register
+    },
+    {
+        path: '/playView',
+        component: PlayView
     }
 ]
 
