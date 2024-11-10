@@ -1,17 +1,20 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomePart from "@/views/HomePart.vue";
 import LookForMusic from "@/views/LookForMusic.vue";
-import MyMusic from "@/views/MyMusic.vue";
-import MusicCommunity from "@/views/MusicCommunity.vue";
+import MyMusic from "@/views/MyMusic/MyMusic.vue";
+import MusicCommunity from "@/views/Community/MusicCommunity.vue";
 import LoginView from "@/views/Login/LoginView.vue";
 import Register from "@/views/Login/RegisterView.vue";
 import PlayView from "@/views/MusicPlayView/PlayView.vue";
+import RecommendMusic from "@/components/RecommendMusic.vue";
+import SearchView from "@/views/Search/SearchView.vue";
+import AudioPlay from "@/views/MusicPlayView/AudioPlay.vue";
 
 
 const routes = [
     {
         path: '/',
-        component: HomePart
+        component: LookForMusic,
+        redirect: '/LookForMusic'
     },
 
     {
@@ -37,7 +40,21 @@ const routes = [
     {
         path: '/playView',
         component: PlayView
-    }
+    },
+    {
+        path: '/recommendMusic',
+        component: RecommendMusic
+
+    },
+    {
+        path: '/SearchView',
+        component: SearchView
+    },
+    {
+        path: '/audioPlay',
+        component: AudioPlay
+    },
+
 ]
 
 const router = createRouter({

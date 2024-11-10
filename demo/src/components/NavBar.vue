@@ -6,21 +6,12 @@
 
             <!-- 导航链接 -->
             <nav class="nav-links">
-                <router-link to="/">八部半</router-link>
                 <router-link to="/lookForMusic">发现音乐</router-link>
                 <router-link to="/myMusic">我的音乐</router-link>
                 <router-link to="/musicCommunity">社区</router-link>
+                <router-link to="/SearchView">搜索</router-link>
             </nav>
 
-            <!-- 头像和登录按钮 -->
-            <HeadPicture />
-
-
-            <!-- 搜索框 -->
-            <div class="search-bar">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="音乐/视频/电台/用户" />
-            </div>
         </div>
     </div>
     <router-view class="page-content" />
@@ -48,10 +39,9 @@
 
 
 <script>
-import HeadPicture from './HeadPicture.vue';
 export default {
     components: {
-        HeadPicture
+
     },
     name: 'NavBar',
     data() {
@@ -84,6 +74,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .logo {
@@ -93,6 +84,8 @@ export default {
 }
 
 .nav-links {
+    position: absolute;
+    left: 100px;
     display: flex;
     gap: 20px;
     color: #fff;
@@ -115,30 +108,7 @@ export default {
     background-color: #1e7f8a;
 }
 
-.search-bar {
-    position: relative;
-    width: 180px;
-    margin-left: auto;
-}
 
-.search-bar input {
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    padding-left: 30px;
-    font-size: 14px;
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #aaa;
-}
 
 .page-content {
     margin-top: 70px;
